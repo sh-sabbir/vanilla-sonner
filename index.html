@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <button id="trigger">Add Toast</button>
+    <button id="trigger2">Add Toast - Bottom Center</button>
+    <button id="trigger3">Add Toast - Top Center</button>
+
+    <script src="dist/vanilla-sonner.umd.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toastTrigger = document.getElementById("trigger");
+        const toastTrigger2 = document.getElementById("trigger2");
+        const toastTrigger3 = document.getElementById("trigger3");
+
+        const toaster = new VanillaSooner();
+
+        const toasterBottomCenter = new VanillaSooner({
+          position: "bottom-center",
+        });
+        const toasterTopCenter = new VanillaSooner({ position: "top-center" });
+        const toasterTopLeft = new VanillaSooner({ position: "top-left" });
+        const toasterBottomLeft = new VanillaSooner({
+          position: "bottom-left",
+        });
+        const toasterTopRight = new VanillaSooner({ position: "top-right" });
+        const toasterBottomRight = new VanillaSooner({
+          position: "bottom-right",
+        });
+
+        toastTrigger.addEventListener("click", () => {
+          toaster.toast("Test - Bottom Center", {
+            position: "bottom-center",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+          toaster.toast("Test - Top Center", {
+            position: "top-center",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+
+          toaster.toast("Test - Top Left", {
+            position: "top-left",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+          toaster.toast("Test - Bottom Left", {
+            position: "bottom-left",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+
+          toaster.toast("Test - Top Right", {
+            position: "top-right",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+          toaster.toast("Test - Bottom Right", {
+            position: "bottom-right",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+        });
+
+        toastTrigger2.addEventListener("click", () => {
+          toaster.toast("Test - Bottom Center", {
+            position: "bottom-center",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+        });
+
+        toastTrigger3.addEventListener("click", () => {
+          toaster.toast("Test - Top Center", {
+            position: "top-center",
+            description: `An opinionated toast component for React.-${Math.floor(
+              Math.random() * 1000
+            )}`,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

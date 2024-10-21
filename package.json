@@ -1,0 +1,29 @@
+{
+  "name": "vanilla-sonner",
+  "version": "0.0.1",
+  "description": "A brief description of my library",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs --bundleConfigAsCjs",
+    "build:min": "rollup -c rollup.config.mjs --bundleConfigAsCjs -o dist/$npm_package_name.umd.min.js -o dist/$npm_package_name.cjs.min.js -o dist/$npm_package_name.esm.min.js"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "postcss": "^8.4.47",
+    "postcss-minify": "^1.1.0",
+    "rollup": "^4.22.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

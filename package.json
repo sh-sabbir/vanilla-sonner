@@ -6,10 +6,27 @@
     "build": "rollup -c rollup.config.mjs --bundleConfigAsCjs",
     "build:min": "rollup -c rollup.config.mjs --bundleConfigAsCjs -o dist/$npm_package_name.umd.min.js -o dist/$npm_package_name.cjs.min.js -o dist/$npm_package_name.esm.min.js"
   },
-  "keywords": [],
-  "author": "Your Name",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "sonner",
+    "vanilla js",
+    "notifications",
+    "toast",
+    "snackbar",
+    "message"
+  ],
+  "author": "Sabbir Hasan <hello@iamsabbir.dev>",
+  "homepage": "https://sonner.emilkowal.ski/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sh-sabbir/vanilla-sonner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sh-sabbir/vanilla-sonner/issues"
+  },
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
@@ -21,9 +38,5 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-uglify": "^3.0.0"
-  },
-  "files": [
-    "dist",
-    "src"
-  ]
+  }
 }
